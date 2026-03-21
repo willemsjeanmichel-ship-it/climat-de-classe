@@ -1,2 +1,10 @@
+Démarrage :
+
 cd climat-de-classe
 npm run dev
+
+Upload :
+
+git add .
+git commit -m "clean class list layout"
+git push
