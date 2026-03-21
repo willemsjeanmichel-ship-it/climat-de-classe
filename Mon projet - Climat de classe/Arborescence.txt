@@ -1,0 +1,84 @@
+climat-de-classe/
+│
+├── public/
+│   ├── logo-wjm.png
+│   └── favicon.ico
+│
+├── src/
+│   ├── assets/
+│   │   ├── icons/
+│   │   └── backgrounds/
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── AppShell.jsx
+│   │   │   ├── Header.jsx
+│   │   │   └── Footer.jsx
+│   │   │
+│   │   ├── student/
+│   │   │   ├── WeatherChoiceCard.jsx
+│   │   │   ├── MessageBox.jsx
+│   │   │   └── SubmitButton.jsx
+│   │   │
+│   │   ├── dashboard/
+│   │   │   ├── SkyBackground.jsx
+│   │   │   ├── FloatingEmojiLayer.jsx
+│   │   │   ├── MessageEnvelope.jsx
+│   │   │   ├── BottomStatsBar.jsx
+│   │   │   └── SessionHeader.jsx
+│   │   │
+│   │   ├── stats/
+│   │   │   ├── StatsChart.jsx
+│   │   │   └── StatsFilters.jsx
+│   │   │
+│   │   └── qr/
+│   │       ├── QrGeneratorCard.jsx
+│   │       └── PrintableQrSheet.jsx
+│   │
+│   ├── pages/
+│   │   ├── HomePage.jsx
+│   │   ├── StudentVotePage.jsx
+│   │   ├── AlreadyVotedPage.jsx
+│   │   ├── ThankYouPage.jsx
+│   │   ├── DashboardPage.jsx
+│   │   ├── StatisticsPage.jsx
+│   │   ├── QrCodesPage.jsx
+│   │   └── NotFoundPage.jsx
+│   │
+│   ├── services/
+│   │   ├── supabaseClient.js
+│   │   ├── classesService.js
+│   │   ├── sessionsService.js
+│   │   ├── votesService.js
+│   │   ├── statsService.js
+│   │   └── qrService.js
+│   │
+│   ├── hooks/
+│   │   ├── useActiveSession.js
+│   │   ├── useRealtimeVotes.js
+│   │   ├── useVoteGuard.js
+│   │   └── useClassWeatherSummary.js
+│   │
+│   ├── utils/
+│   │   ├── constants.js
+│   │   ├── weatherHelpers.js
+│   │   ├── localVoteToken.js
+│   │   ├── dateHelpers.js
+│   │   └── printHelpers.js
+│   │
+│   ├── styles/
+│   │   ├── globals.css
+│   │   ├── theme.css
+│   │   ├── student.css
+│   │   ├── dashboard.css
+│   │   ├── stats.css
+│   │   └── qr.css
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── router.jsx
+│
+├── .env
+├── package.json
+├── vite.config.js
+└── README.md
