@@ -10,11 +10,14 @@ function slugify(value) {
     .replace(/^-+|-+$/g, "");
 }
 
+function generateClassCode() {
+  return Math.random().toString(36).slice(2, 8).toUpperCase();
+}
+
 function ClassList({ onSelectClass, selectedClass, onDeleteClass, deleting }) {
   const [classes, setClasses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [className, setClassName] = useState("");
-  const [classCode, setClassCode] = useState("");
   const [creating, setCreating] = useState(false);
   const [feedback, setFeedback] = useState("");
 
@@ -44,7 +47,6 @@ function ClassList({ onSelectClass, selectedClass, onDeleteClass, deleting }) {
     event.preventDefault();
 
     const name = className.trim();
-    const code = classCode.trim();
 
     if (!name) {
       setFeedback("Le nom de la classe est obligatoire.");
@@ -55,15 +57,14 @@ function ClassList({ onSelectClass, selectedClass, onDeleteClass, deleting }) {
     setFeedback("");
 
     const slug = slugify(name);
-    const finalCode =
-      code || Math.random().toString(36).slice(2, 8).toUpperCase();
+    const code = generateClassCode();
 
     const { data, error } = await supabase
       .from("classes")
       .insert([
         {
           name,
-          code: finalCode,
+          code,
           slug,
         },
       ])
@@ -78,7 +79,6 @@ function ClassList({ onSelectClass, selectedClass, onDeleteClass, deleting }) {
     }
 
     setClassName("");
-    setClassCode("");
     setFeedback("Classe créée avec succès.");
 
     setClasses((prev) => {
@@ -106,17 +106,6 @@ function ClassList({ onSelectClass, selectedClass, onDeleteClass, deleting }) {
             value={className}
             onChange={(e) => setClassName(e.target.value)}
             placeholder="Ex. 5e Électricité"
-          />
-        </div>
-
-        <div className="admin-form-group">
-          <label htmlFor="class-code">Code de la classe (optionnel)</label>
-          <input
-            id="class-code"
-            type="text"
-            value={classCode}
-            onChange={(e) => setClassCode(e.target.value)}
-            placeholder="Ex. ELEC5"
           />
         </div>
 

@@ -261,7 +261,7 @@ function AdminStats() {
             <span className="admin-stat-icon">💬</span>
             <div className="admin-stat-text">
               <strong>{messagesCount}</strong>
-              <p>Messages élèves</p>
+              <p>Un souci ?</p>
             </div>
           </button>
 
@@ -273,7 +273,7 @@ function AdminStats() {
             <span className="admin-stat-icon">🚨</span>
             <div className="admin-stat-text">
               <strong>{reportsCount}</strong>
-              <p>Signalements</p>
+              <p>Un problème ?</p>
             </div>
           </button>
         </div>
