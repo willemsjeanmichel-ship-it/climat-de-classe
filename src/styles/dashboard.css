@@ -559,3 +559,19 @@ button.dashboard-total-pill:hover{
     justify-content:space-between;
   }
 }
+
+@keyframes floatEmoji {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.dashboard-floating-vote {
+  animation: floatEmoji 4s linear infinite;
+}
