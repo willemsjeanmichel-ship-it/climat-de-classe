@@ -134,8 +134,8 @@
   width: 100%;
   margin-top: 0;
 
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: white;
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  color: white !important;
 }
 
 .student-secondary-action:hover {
