@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import "../styles/student.css";
-import { Link, useLocation } from "react-router-dom";
 
 function ProblemReportPage() {
-  const { slug } = useParams();
+  const location = useLocation();
+  const slug = location.state?.slug;
 
   const [name, setName] = useState("");
   const [className, setClassName] = useState("");
