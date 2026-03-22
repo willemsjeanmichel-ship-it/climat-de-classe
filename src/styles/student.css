@@ -572,3 +572,17 @@
   margin-right: auto;
   line-height: 1.4;
 }
+
+.student-secondary-action{
+  width: 100%;
+  margin-top: 0;
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: white !important;
+}
+
+.student-return-button{
+  width: 100%;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  color: white !important;
+}

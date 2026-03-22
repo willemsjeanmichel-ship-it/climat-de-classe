@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import "../styles/student.css";
+import { Link, useLocation } from "react-router-dom";
 
 function ProblemReportPage() {
   const { slug } = useParams();
@@ -82,8 +83,8 @@ function ProblemReportPage() {
 
         {/* BOUTON RETOUR (hors form) */}
         <Link
-          to={`/vote/${slug}`}
-          className="student-button student-secondary-action"
+          to={slug ? `/vote/${slug}` : "/"}
+          className="student-button student-return-button"
         >
           Retour
         </Link>

@@ -308,7 +308,11 @@ function StudentVotePage() {
             {loading ? "Envoi en cours..." : "Envoyer mon vote"}
           </button>
 
-          <Link to="/probleme" className="student-button student-secondary-action">
+          <Link 
+            to="/probleme"
+            state={{ slug }}
+            className="student-button student-secondary-action"
+          >
             Un problème plus grave ?
           </Link>
         </div>
